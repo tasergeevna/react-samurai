@@ -1,25 +1,26 @@
 .app-wrapper {
   width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: 
-  "h h"
-  "n c";
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .header {
-  grid-area: h;
-  background-color: aqua;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
-  grid-area: n;
   display: flex;
-  flex-direction: column;
-  background-color: blue;
+  align-items: center;
+  justify-content: space-between; 
+  
 }
 
 .nav a {
@@ -27,11 +28,24 @@
   color: black;
 }
 
-.content {
-  grid-area: c;
-  background-color: burlywood;
+.account {
+  display: grid;
+  grid-template-columns: 200px 1fr;
 }
 
-.header img {
-  width: 20px;
+.profile {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:lavender;
+}
+
+.status {
+  font-style: italic;
+}
+
+.content {
+  width: 1000px;
+  border: solid 5px lavender;
 }
