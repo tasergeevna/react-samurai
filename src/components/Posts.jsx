@@ -10,17 +10,19 @@ import posts from "./Data";
 
 function Post(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 300 }}>
       <CardMedia
         component="img"
         height="140"
         image={props.item.pic}
-        alt="green iguana"
+        alt={props.item.alt}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
+          {props.item.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
+          {props.item.text}
         </Typography>
       </CardContent>
       <CardActions>

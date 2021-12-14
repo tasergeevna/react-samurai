@@ -11,8 +11,10 @@ const App = () => {
     <div className="app-wrapper">
       <Header />
       <div className="account">
-        <Profile />
-        <Posts />
+          <Profile />
+        <div className="posts">
+          <Posts />
+        </div>
       </div>
     </div>
   );
