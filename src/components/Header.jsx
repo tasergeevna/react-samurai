@@ -14,7 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 const pages = ["Profile", "Messages", "News", "Music", "Settings"];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,7 +36,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar className="header-container" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -107,7 +107,7 @@ const Header = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Tatsiana Yasiuchenia" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

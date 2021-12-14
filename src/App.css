@@ -1,36 +1,16 @@
 .app-wrapper {
-  width: 1200px;
   padding: 0 40px;
   box-sizing: border-box;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 20px;
-  background-color: white;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; 
-  
-}
-
-.nav a {
-  text-decoration: none;
-  color: black;
+.header-container {
+  margin-bottom: 20px;
 }
 
 .account {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr 5fr;
+  column-gap: 20px;
 }
 
 .profile {
@@ -38,7 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:lavender;
+  background-color: #1976d2;
 }
 
 .status {
@@ -47,5 +27,4 @@
 
 .content {
   width: 1000px;
-  border: solid 5px lavender;
 }

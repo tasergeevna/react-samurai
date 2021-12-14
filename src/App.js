@@ -3,7 +3,7 @@ import "./App.css";
 
 import Header from  "./components/Header.jsx";
 import Profile from "./components/Profile";
-import Content from "./components/Content";
+import Posts from "./components/Posts";
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <div className="account">
         <Profile />
-        <Content />
+        <Posts />
       </div>
     </div>
   );
