@@ -3,7 +3,8 @@ import "./App.css";
 
 import Header from  "./components/Header.jsx";
 import Profile from "./components/Profile";
-import Posts from "./components/Posts";
+//mport Posts from "./components/Posts";
+import Messages from "./components/Messagess";
 
 
 const App = () => {
@@ -12,8 +13,9 @@ const App = () => {
       <Header />
       <div className="account">
           <Profile />
-        <div className="posts">
-          <Posts />
+        <div className="content-container">
+          {/*<Posts />*/}
+          <Messages />
         </div>
       </div>
     </div>

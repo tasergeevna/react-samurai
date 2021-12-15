@@ -9,7 +9,7 @@
 
 .account {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr 4fr;
   column-gap: 20px;
 }
 
@@ -24,7 +24,7 @@
   font-style: italic;
 }
 
-.posts {
+.content-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
