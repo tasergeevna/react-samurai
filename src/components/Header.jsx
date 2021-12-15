@@ -12,9 +12,30 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { NavLink } from "react-router-dom";
 
-const pages = ["Profile", "Messages", "News", "Music", "Settings"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = [
+  {"title": "Profile",
+  "link": "/posts"}, 
+  {"title": "Messages",
+  "link": "/messages"}, 
+  {"title": "News",
+  "link": ""},
+  {"title":"Music",
+  "link": ""},
+  {"title":"Settings",
+  "link": ""}
+];
+const settings = [
+  {"title": "Profile",
+  "link": "/posts"}, 
+  {"title": "Account",
+  "link": ""}, 
+  {"title": "Dashboard",
+  "link": ""},
+  {"title":"Logout",
+  "link": ""}
+];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -78,8 +99,8 @@ const Header = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -95,11 +116,10 @@ const Header = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.title}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+                sx={{ my: 2, color: 'white', display: 'block' }}>
+                  <NavLink to={page.link} style={{textDecoration: "none", color: "white"}} exact activeClassName="active">{page.title}</NavLink>
               </Button>
             ))}
           </Box>
@@ -127,8 +147,8 @@ const Header = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.title} href={settings.link} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{setting.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>

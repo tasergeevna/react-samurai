@@ -3,22 +3,27 @@ import "./App.css";
 
 import Header from  "./components/Header.jsx";
 import Profile from "./components/Profile";
-//mport Posts from "./components/Posts";
-import Messages from "./components/Messagess";
+import Posts from "./components/Posts";
+import Messages from "./components/Messages";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 const App = () => {
   return (
-    <div className="app-wrapper">
-      <Header />
-      <div className="account">
-          <Profile />
-        <div className="content-container">
-          {/*<Posts />*/}
-          <Messages />
+    <Router>
+      <div className="app-wrapper">
+        <Header />
+        <div className="account">
+            <Profile />
+          <div className="content-container">
+          <Routes>
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/messages" element={<Messages />} />
+          </Routes>
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
