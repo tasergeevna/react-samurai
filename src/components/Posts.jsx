@@ -35,8 +35,8 @@ function Post(props) {
 
 const Posts = () => {
   return (
-    posts.map((item, index) => 
-      <Post item={item} key={index}/>)
+    <div className="posts-container">{posts.map((item, index) => 
+      <Post item={item} key={index}/>)}</div>
   )
 }
 

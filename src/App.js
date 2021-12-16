@@ -14,13 +14,11 @@ const App = () => {
       <div className="app-wrapper">
         <Header />
         <div className="account">
-            <Profile />
-          <div className="content-container">
+          <Profile />
           <Routes>
             <Route path="/posts" element={<Posts />} />
             <Route path="/messages" element={<Messages />} />
           </Routes>
-          </div>
         </div>
       </div>
     </Router>

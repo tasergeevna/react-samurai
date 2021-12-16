@@ -24,11 +24,17 @@
   font-style: italic;
 }
 
-.content-container {
+.posts-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
   row-gap: 20px;
+}
+
+.messages-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 10px;
 }
 
 .active {
