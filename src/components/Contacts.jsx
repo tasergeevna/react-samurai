@@ -10,7 +10,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Link from '@mui/material/Link';
 import friends from "./Friends";
 import { NavLink } from 'react-router-dom';
 
