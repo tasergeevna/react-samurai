@@ -12,6 +12,7 @@ import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Link from '@mui/material/Link';
 import friends from "./Friends";
+import { NavLink } from 'react-router-dom';
 
 
 export default function Contacts(props) {
@@ -38,12 +39,12 @@ export default function Contacts(props) {
                  <FolderIcon />
              </Avatar>
              </ListItemAvatar>
-             <Link>
+             <NavLink to={`/messages/${friend.link}`}>
               <ListItemText
               primary={friend.name}
               secondary={secondary ? friend.status : null}
               />
-             </Link>
+             </NavLink>
          </ListItem>
           )}</List> 
     </Box>

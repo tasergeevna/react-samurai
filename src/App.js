@@ -17,7 +17,7 @@ const App = () => {
           <Profile />
           <Routes>
             <Route path="/posts" element={<Posts />} />
-            <Route path="/messages" element={<Messages />} />
+            <Route exact path="/messages" element={<Messages />} />
           </Routes>
         </div>
       </div>
