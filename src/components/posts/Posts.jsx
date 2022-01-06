@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import posts from "./Data";
 
 function Post(props) {
@@ -28,6 +30,9 @@ function Post(props) {
       <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Show More</Button>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon color="primary" />
+        </IconButton>
       </CardActions>
     </Card>
   );

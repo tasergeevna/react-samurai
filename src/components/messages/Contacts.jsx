@@ -8,7 +8,6 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import FolderIcon from '@mui/icons-material/Folder';
 import DeleteIcon from '@mui/icons-material/Delete';
 import friends from "./Friends";
 import { NavLink } from 'react-router-dom';
@@ -34,9 +33,7 @@ export default function Contacts(props) {
              }
          >
              <ListItemAvatar>
-             <Avatar>
-                 <FolderIcon />
-             </Avatar>
+             <Avatar alt={friend.name} src="/static/images/avatar/1.jpg"  />
              </ListItemAvatar>
              <NavLink to={`/messages/${friend.link}`}>
               <ListItemText

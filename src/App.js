@@ -3,8 +3,8 @@ import "./App.css";
 
 import Header from  "./components/Header.jsx";
 import Profile from "./components/Profile";
-import Posts from "./components/Posts";
-import Messages from "./components/Messages";
+import Posts from "./components/posts/Posts";
+import Messages from "./components/messages/Messages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
