@@ -6,12 +6,13 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
+import state from "../redux/state";
 
 
-export default function Profile() {
+export default function Profile(props) {
   return (
     <Card sx={{ minWidth: 200 }} style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "20px"}}>
-      <Avatar alt="User avatar" src="https://pbs.twimg.com/profile_images/1454384556212117508/HiRo9oxK_400x400.jpg" />
+      <Avatar alt="User avatar" src= {state.user.pic} />
       <CardContent >
         <Typography textAlign="center"
             variant="h6"
@@ -19,13 +20,13 @@ export default function Profile() {
             color="black"
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
-          Tatsiana Yasiuchenia
+         {state.user.name}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary" textAlign="center">
-          33 y. o., Minsk
+        {state.user.info}
         </Typography>
         <Typography variant="body2">
-          Блабла блаблабла блаблаблабла блаблабалабла
+          {state.user.status}
         </Typography>
       </CardContent>
       <CardActions>

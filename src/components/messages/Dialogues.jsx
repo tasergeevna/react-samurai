@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import interlocutors from './Interlocutors';
+import state from "../../redux/state";
 
 export default function Dialogues(props) {
   return (
@@ -14,7 +14,7 @@ export default function Dialogues(props) {
       <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div" textAlign="center">
         Messages
       </Typography>
-      {interlocutors.map((interlocutor, key) =>
+      {state.interlocutors.map((interlocutor, key) =>
         <ListItem alignItems="flex-start" key={key} style={{borderBottom: "1px solid  lightgrey"}}>
           <ListItemAvatar>
             <Avatar alt={interlocutor.name} src="/static/images/avatar/1.jpg" />

@@ -9,7 +9,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
-import friends from "./Friends";
+import state from "../../redux/state";
 import { NavLink } from 'react-router-dom';
 
 
@@ -23,7 +23,7 @@ export default function Contacts(props) {
         Friends
         </Typography>
         <List dense={dense}>
-          {friends.map((friend, key) =>
+          {state.friends.map((friend, key) =>
              <ListItem 
              key={key}
              secondaryAction={

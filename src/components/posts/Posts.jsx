@@ -8,7 +8,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import posts from "./Data";
+import Icon from '@mui/material/Icon';
+import state from "../../redux/state";
 
 function Post(props) {
   return (
@@ -38,10 +39,20 @@ function Post(props) {
   );
 }
 
+const NewPost = () => {
+  return (
+    <Card sx={{ maxWidth: 300 }}>
+      <Icon baseClassName="fas" className="fa-plus-circle" color="primary" />
+    </Card>
+  )
+}
+
 const Posts = () => {
   return (
-    <div className="posts-container">{posts.map((item, index) => 
-      <Post item={item} key={index}/>)}</div>
+    <div className="posts-container">{state.posts.map((item, index) => 
+      <Post item={item} key={index}/>)}
+      <NewPost />
+    </div>
   )
 }
 
