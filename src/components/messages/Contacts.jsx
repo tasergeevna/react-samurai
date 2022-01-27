@@ -9,13 +9,16 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
-import state from "../../redux/state";
 import { NavLink } from 'react-router-dom';
+
+import {StateContext} from "../../redux/state";
+import { useContext } from 'react';
 
 
 export default function Contacts(props) {
   const dense = React.useState(false);
   const secondary = React.useState(false);
+  const state = useContext(StateContext);
 
   return (
     <Box >

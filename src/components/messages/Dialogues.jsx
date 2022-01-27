@@ -6,9 +6,12 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import state from "../../redux/state";
+import {StateContext} from "../../redux/state";
+import { useContext } from 'react';
 
 export default function Dialogues(props) {
+  const state = useContext(StateContext);
+  
   return (
     <List sx={{ width: '100%', bgcolor: 'background.paper' }} style={{paddingTop: '0px'}}>
       <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div" textAlign="center">

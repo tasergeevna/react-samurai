@@ -1,3 +1,5 @@
+import React from "react";
+
 let state = {
     user: {"name": "Tatsiana Yasiuchenia",
         "info": "33 y. o., Minsk",
@@ -55,4 +57,6 @@ let state = {
     ]
 }
 
-export default state;
+const StateContext = React.createContext(state);
+
+export {StateContext, state};

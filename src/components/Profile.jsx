@@ -6,10 +6,12 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import state from "../redux/state";
-
+import { useContext } from "react";
+import {StateContext} from "../redux/state";
 
 export default function Profile(props) {
+  const state = useContext(StateContext);
+
   return (
     <Card sx={{ minWidth: 200 }} style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "20px"}}>
       <Avatar alt="User avatar" src= {state.user.pic} />

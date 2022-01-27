@@ -9,9 +9,12 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Icon from '@mui/material/Icon';
-import state from "../../redux/state";
+
+import {StateContext} from "../../redux/state";
+import { useContext } from 'react';
 
 function Post(props) {
+  
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardMedia
@@ -48,6 +51,8 @@ const NewPost = () => {
 }
 
 const Posts = () => {
+  const state = useContext(StateContext);
+  
   return (
     <div className="posts-container">{state.posts.map((item, index) => 
       <Post item={item} key={index}/>)}
