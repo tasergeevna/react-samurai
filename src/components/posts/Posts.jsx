@@ -8,14 +8,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import AddIcon from '@mui/icons-material/Add';
 
 import {StateContext} from "../../redux/state";
 import { useContext } from 'react';
 
-import NewPostCard from "./Newpost";
+import NewPostCard from "./NewPostCard";
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function Post(props) {
   
@@ -46,27 +45,14 @@ function Post(props) {
   );
 }
 
-const NewPost = ({setToggle}) => {
-
-  return (
-    <Card sx={{ maxWidth: 300 }}  style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-      <IconButton color="primary" aria-label="upload new post" component="span" size="large" onClick={() => setToggle(true)}>
-        <AddIcon fontSize="large" />
-      </IconButton>
-    </Card>
-  )
-}
 
 const Posts = () => {
   const state = useContext(StateContext);
-  const [toggle, setToggle] = useState(false);
   
   return (
     <div className="posts-container">{state.posts.map((item, index) => 
       <Post item={item} key={index}/>)}
-      <NewPost setToggle={setToggle}/>
       <NewPostCard />
-      {toggle && <NewPostCard />}
     </div>
   )
 }
